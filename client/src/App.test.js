@@ -7,3 +7,8 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+it('checks for the name Marta', () => {
+  const { getByText } = render(<App/>);
+  expect(getByText('Marta')).toBeInTheDocument();
+});
